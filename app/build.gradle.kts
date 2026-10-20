@@ -37,9 +37,18 @@ android {
     buildFeatures {
         compose = true
     }
+    //indicamos la verision de la extencion del compilador para que funcione Glance
+    composeOptions{
+        kotlinCompilerExtensionVersion = "1.5.15"
+    }
 }
 
 dependencies {
+    implementation(libs.androidx.glance.appwidget)
+    implementation(libs.androidx.glance.material3)
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3)
